@@ -1,0 +1,11 @@
+# Donnees brutes volumineuses (810 MB de tracking) - non versionnees
+nfl-big-data-bowl-regional-event-data-main/
+
+# Cache intermediaire volumineux (regenere par main.py)
+outputs/separation_raw.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
