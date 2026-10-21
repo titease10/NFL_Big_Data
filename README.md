@@ -33,7 +33,13 @@ pip install -r requirements.txt
 python main.py                 # pipeline complet (lit les 122 fichiers tracking, ~15 s)
 python main.py --reuse-cache   # réutilise le CSV intermédiaire déjà extrait
 python animation.py            # bonus : animation Plotly d'une action exemple
+python build_page.py           # bonus : page web recapitulative (index.html)
 ```
+
+**Page web :** `index.html` (à la racine) rassemble l'insight, les 3 graphiques, le
+tableau des top/bottom joueurs et l'animation. Ouvrez-la directement dans un
+navigateur, ou activez GitHub Pages (Settings → Pages → branche `main`) pour un
+lien public : `https://titease10.github.io/NFL_Big_Data/`.
 
 Les données attendues sont dans `nfl-big-data-bowl-regional-event-data-main/data/`.
 Sorties générées dans `outputs/` :
