@@ -11,12 +11,28 @@ individuelle. Un **coordinateur offensif** l'utilise pour choisir qui aligner fa
 à une défense en man, un **recruteur** pour repérer un profil qui bat l'homme, et
 un **commentateur** pour une histoire visuelle en trois secondes.
 
+## Aperçu
+
+Qui bat l'homme ? Chaque point est un joueur ; au-dessus de la diagonale = crée plus
+d'espace contre le Man que contre la Zone.
+
+![Séparation Man vs Zone](outputs/01_scatter_man_vs_zone.png)
+
+Top 10 des Man-Beaters (score normalisé par poste) :
+
+![Top 10 Man-Beaters](outputs/02_top10_man_beaters.png)
+
+Séparation Man vs Zone par poste :
+
+![Séparation par poste](outputs/03_separation_by_position.png)
+
 ## Comment lancer
 
 ```bash
 pip install -r requirements.txt
 python main.py                 # pipeline complet (lit les 122 fichiers tracking, ~15 s)
 python main.py --reuse-cache   # réutilise le CSV intermédiaire déjà extrait
+python animation.py            # bonus : animation Plotly d'une action exemple
 ```
 
 Les données attendues sont dans `nfl-big-data-bowl-regional-event-data-main/data/`.
@@ -24,6 +40,7 @@ Sorties générées dans `outputs/` :
 - `01_scatter_man_vs_zone.png` — séparation vs Man (Y) contre vs Zone (X), un point par joueur, diagonale de référence.
 - `02_top10_man_beaters.png` — Top 10 des Man-Beaters.
 - `03_separation_by_position.png` — distribution Man vs Zone par poste.
+- `04_animation_man_beater.html` — **bonus** : animation interactive d'une passe complétée à Mark Andrews, où la séparation au défenseur le plus proche se creuse image par image.
 - `receiver_separation.csv` — table par joueur (séparations, scores, tailles d'échantillon).
 
 ## Méthode
